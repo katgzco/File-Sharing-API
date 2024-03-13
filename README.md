@@ -40,6 +40,10 @@ To run the project, follow these steps:
 ```
 mvn spring-boot:run
 ```
+## Postman Collection
+
+[Postman](https://drive.google.com/file/d/1Ua8nqKC_2TkV07KYfQ91NpUFTztctPXS/view?usp=sharing)
+
 ## Contributing
 1. Fork the repository.
 2. Create a new branch for your feature or fix.
