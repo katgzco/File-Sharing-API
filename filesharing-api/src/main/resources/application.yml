@@ -1,0 +1,52 @@
+server:
+    port: 8080
+spring:
+    datasource:
+        url: jdbc:h2:mem:testdb
+        driver-class-name: org.h2.Driver
+        username: sa
+        password: ''
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate:
+            ddl-auto: update
+      show-sql: true
+
+    servlet:
+      multipart:
+        max-file-size: 1MB
+        max-request-size: 10MB
+
+    profiles:
+      active: default
+
+
+logging:
+  level:
+    root: WARN
+    web: INFO
+    com.example: DEBUG
+    org.springframework.security: DEBUG
+
+
+# JWT secret key
+# node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+token:
+  secret:
+    key: 48a868a4042f634ac04a117f00a87202131dd7c46c4b32c4acb3edc5e15f4511
+
+  # JWT expiration is 1 hour
+  expirationms: 3600000
+
+
+storage:
+  location: /Users/katgomez/uploads/
+
+
+
+
+
