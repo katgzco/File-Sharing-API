@@ -125,7 +125,7 @@ public class FileController {
     }
 
     @PostMapping("/share/{fileName}/{sharedWithUsername}")
-    //@PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('USER')")
     public ResponseDto shareFile(@PathVariable
                                            @NotBlank(message = "File name is mandatory")
                                            @Pattern(regexp = "^[\\w,\\s-]+\\.[A-Za-z]{3}$", message = "Invalid file name")
